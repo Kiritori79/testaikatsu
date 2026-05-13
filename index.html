@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff7f8" />
+    <title>测测你最像偶像活动初代里的谁</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@300;400;500&family=Yomogi&family=Zen+Maru+Gothic:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dreamscape" aria-hidden="true">
+      <div class="dreamscape__wash"></div>
+      <div class="dreamscape__bokeh dreamscape__bokeh--1"></div>
+      <div class="dreamscape__bokeh dreamscape__bokeh--2"></div>
+      <div class="dreamscape__bokeh dreamscape__bokeh--3"></div>
+      <div class="dreamscape__ribbon dreamscape__ribbon--1"></div>
+      <div class="dreamscape__ribbon dreamscape__ribbon--2"></div>
+      <div class="dreamscape__dots"></div>
+      <div class="dreamscape__sparkles dreamscape__sparkles--1"></div>
+      <div class="dreamscape__sparkles dreamscape__sparkles--2"></div>
+    </div>
+    <div class="stars" id="stars" aria-hidden="true"></div>
+
+    <main class="app">
+      <!-- 首页 -->
+      <section id="screen-home" class="screen screen--active" data-screen="home">
+        <div class="screen__inner screen__inner--center">
+          <div class="screen__main screen__main--home">
+            <div class="home__hero-float">
+              <div class="home__hero-glow" aria-hidden="true"></div>
+              <div class="home__top-deco" aria-hidden="true">
+                <span class="home__mini-star">✦</span>
+                <span class="home__mini-star">✧</span>
+                <span class="home__mini-star">✦</span>
+                <span class="home__mini-star">✧</span>
+              </div>
+              <div class="home__cover-wrap">
+                <div class="home__cover-sparkles" aria-hidden="true"></div>
+                <img
+                  class="home__cover"
+                  src="img/cover.png"
+                  alt=""
+                  width="560"
+                  height="700"
+                  decoding="async"
+                  onerror="this.classList.add('is-missing')"
+                />
+                <div class="home__cover-placeholder" aria-hidden="true">放入封面图<br />img/cover.png</div>
+              </div>
+              <p class="home__logo-tagline">✦ Aikatsu Character Test ✦</p>
+              <p class="home__badge">Aikatsu! · 初代印象测试</p>
+              <h1 class="home__title">测测你最像<br />偶像活动初代里的谁</h1>
+              <p class="home__subtitle">你的偶像气质会属于谁？</p>
+              <div class="home__btn-wrap">
+                <button type="button" class="btn btn--primary" id="btn-start">开始测试</button>
+              </div>
+            </div>
+          </div>
+          <footer class="site-footer">
+            <p class="site-footer__line">作者 / 发布 / 运行：雾鸟 Kiritori</p>
+            <p class="site-footer__line">
+              本测试为《偶像活动》粉丝向非商业同人作品，仅供娱乐与交流使用。
+            </p>
+          </footer>
+        </div>
+      </section>
+
+      <!-- CN 输入 -->
+      <section id="screen-name" class="screen" data-screen="name" aria-hidden="true">
+        <div class="screen__inner screen__inner--center">
+          <div class="screen__main screen__main--name">
+            <h2 class="name-screen__title">留下你的名字吧 ✨</h2>
+            <p class="name-screen__sub">可以输入 CN / 昵称，也可以跳过</p>
+            <div class="name-screen__field">
+              <input
+                class="name-screen__input"
+                type="text"
+                id="input-cn"
+                maxlength="24"
+                autocomplete="nickname"
+                placeholder="输入你的名字…"
+              />
+            </div>
+            <div class="name-screen__actions">
+              <button type="button" class="btn btn--primary" id="btn-name-go">开始测试</button>
+              <button type="button" class="btn btn--ghost" id="btn-name-skip">跳过</button>
+            </div>
+          </div>
+          <footer class="site-footer">
+            <p class="site-footer__line">作者 / 发布 / 运行：雾鸟 Kiritori</p>
+            <p class="site-footer__line">
+              本测试为《偶像活动》粉丝向非商业同人作品，仅供娱乐与交流使用。
+            </p>
+          </footer>
+        </div>
+      </section>
+
+      <!-- 问题页 -->
+      <section id="screen-quiz" class="screen" data-screen="quiz" aria-hidden="true">
+        <div class="screen__inner">
+          <div class="screen__main screen__main--quiz">
+            <div class="quiz__top">
+              <div
+                class="progress"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                id="progress-wrap"
+              >
+                <div class="progress__bar" id="progress-bar"></div>
+              </div>
+              <p class="quiz__count"><span id="quiz-current">1</span> / <span id="quiz-total">15</span></p>
+            </div>
+            <div class="quiz__card card card--glass" id="quiz-card">
+              <p class="quiz__qtext" id="quiz-text"></p>
+              <div class="quiz__options" id="quiz-options"></div>
+            </div>
+          </div>
+          <footer class="site-footer">
+            <p class="site-footer__line">作者 / 发布 / 运行：雾鸟 Kiritori</p>
+            <p class="site-footer__line">
+              本测试为《偶像活动》粉丝向非商业同人作品，仅供娱乐与交流使用。
+            </p>
+          </footer>
+        </div>
+      </section>
+
+      <!-- 结果页 -->
+      <section id="screen-result" class="screen" data-screen="result" aria-hidden="true">
+        <div class="screen__inner result">
+          <div class="result-ambience" aria-hidden="true">
+            <div class="result-ambience__glow"></div>
+            <div class="result-ambience__glow result-ambience__glow--2"></div>
+            <div class="result-ambience__stars"></div>
+          </div>
+          <div class="result-fx" id="result-fx" aria-hidden="true"></div>
+
+          <div class="screen__main screen__main--result">
+            <header class="result-reveal">
+              <p class="result-reveal__lead" id="result-lead"></p>
+              <h2 class="result-reveal__name" id="result-hero-name"></h2>
+            </header>
+
+            <article class="ssr-card ssr-card--lux" id="ssr-card">
+              <div class="ssr-card__ribbon">SSR</div>
+              <div class="ssr-card__frame">
+                <div class="ssr-card__holo" aria-hidden="true"></div>
+                <div class="ssr-card__holo-sweep" aria-hidden="true"></div>
+                <div class="ssr-card__portrait" id="result-portrait">
+                  <span class="ssr-card__initial" id="result-initial" hidden></span>
+                </div>
+                <div class="ssr-card__shine" aria-hidden="true"></div>
+                <div class="ssr-card__sparkles" aria-hidden="true"></div>
+              </div>
+              <div class="ssr-card__body">
+                <p class="ssr-card__match">
+                  气质匹配度 <strong id="result-percent">0</strong><span class="unit">%</span>
+                </p>
+                <div class="tags" id="result-tags"></div>
+                <p class="ssr-card__desc" id="result-desc"></p>
+                <p class="ssr-card__quote" id="result-quote" lang="ja"></p>
+              </div>
+            </article>
+
+            <section class="composition card card--glass" aria-labelledby="composition-heading">
+              <h3 id="composition-heading" class="composition__title">你的偶像气质构成</h3>
+              <p class="composition__text" id="composition-text"></p>
+            </section>
+
+            <section class="top3 card card--glass" aria-labelledby="top3-heading">
+              <h3 id="top3-heading" class="top3__title">Top 3 角色占比</h3>
+              <div class="top3__list" id="top3-bars"></div>
+            </section>
+
+            <button type="button" class="btn btn--secondary" id="btn-retry">重新测试</button>
+          </div>
+
+          <footer class="site-footer">
+            <p class="site-footer__line">作者 / 发布 / 运行：雾鸟 Kiritori</p>
+            <p class="site-footer__line">
+              本测试为《偶像活动》粉丝向非商业同人作品，仅供娱乐与交流使用。
+            </p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
