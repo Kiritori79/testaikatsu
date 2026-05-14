@@ -226,167 +226,392 @@ const CHARACTERS = {
  */
 const QUESTIONS = [
   {
-    question: "周末突然空出一天，你会：",
+    question: "如果突然穿越到星光学园，你第一件事会：",
     options: [
-      { text: "独自去的小店坐一下午", scores: { sora: 2, otome: 1 } },
-      { text: "约朋友出去玩", scores: { ichigo: 2, kii: 1 } },
-      { text: "把拖着的事情做完", scores: { ran: 2, seira: 1 } },
-      { text: "晚上一个人散散步", scores: { yurika: 2, kaede: 1 } },
-      { text: "待在家读书做手工", scores: { aoi: 2, sakura: 1 } }
+      {
+        text: "先去看看校园里有没有漂亮的拍照点",
+        scores: { sora: 2, kaede: 1, otome: 1 }
+      },
+      {
+        text: "认真研究课程资料和前辈们的 live 录像",
+        scores: { aoi: 2, sakura: 1, mizuki: 1 }
+      },
+      {
+        text: "想赶紧认识大家",
+        scores: { ichigo: 2, kii: 1, maria: 1 }
+      },
+      {
+        text: "先观察环境再行动",
+        scores: { yurika: 2, aoi: 1, kaede: 1 }
+      },
+      {
+        text: "去训练室练习，思考怎么快速进步",
+        scores: { ran: 2, seira: 1, mizuki: 1 }
+      }
     ]
   },
 
   {
-    question: "朋友一般会因为什么来找你？",
+    question: "如果要准备一场 live，你最在意：",
     options: [
-      { text: "分享日常琐事", scores: { sakura: 2, maria: 1 } },
-      { text: "出去玩", scores: { kii: 2, ichigo: 1 } },
-      { text: "想和你deeptalk", scores: { aoi: 2, mizuki: 1 } },
-      { text: "想让你帮忙解决问题", scores: { seira: 2, ran: 1 } },
-      { text: "想找你一起做点天马行空的事", scores: { kaede: 2, sora: 1 } }
+      {
+        text: "整体舞台氛围够不够梦幻",
+        scores: { otome: 2, sora: 1, maria: 1 }
+      },
+      {
+        text: "能不能让观众开心",
+        scores: { ichigo: 2, kii: 1, maria: 1 }
+      },
+      {
+        text: "自己的表现有没有失误",
+        scores: { ran: 2, seira: 1, mizuki: 1 }
+      },
+      {
+        text: "舞台设计和服装细节",
+        scores: { kaede: 2, sora: 1, sakura: 1 }
+      },
+      {
+        text: "流程是不是安排得够完美",
+        scores: { aoi: 2, mizuki: 1, sakura: 1 }
+      }
     ]
   },
 
   {
-    question: "如果突然要上台讲话，你会：",
+    question: "如果偶活举办校园祭，你会：",
     options: [
-      { text: "提前在脑子里排练很多遍", scores: { sakura: 2, aoi: 1 } },
-      { text: "先讲了再说", scores: { ichigo: 2, kaede: 1 } },
-      { text: "想做到最完美", scores: { mizuki: 2, ran: 1 } },
-      { text: "表面冷静其实有点紧张", scores: { yurika: 2, maria: 1 } },
-      { text: "想让整体表现更有风格", scores: { sora: 2, otome: 1 } }
+      {
+        text: "到处跑来跑去参加活动，对什么都好奇",
+        scores: { kii: 2, ichigo: 1, otome: 1 }
+      },
+      {
+        text: "负责或协助安排整体流程",
+        scores: { aoi: 2, sakura: 1, mizuki: 1 }
+      },
+      {
+        text: "布置特别有氛围的装饰",
+        scores: { yurika: 2, kaede: 1, sora: 1 }
+      },
+      {
+        text: "为了让大家玩得开心提出活动创意",
+        scores: { maria: 2, sakura: 1, ichigo: 1 }
+      },
+      {
+        text: "想把舞台做到最完美",
+        scores: { ran: 2, seira: 1, mizuki: 1 }
+      }
     ]
   },
 
   {
-    question: "你最容易在哪种时候开心？",
+    question: "如果今天状态不好，你会：",
     options: [
-      { text: "大家一起热热闹闹", scores: { ichigo: 2, kii: 1 } },
-      { text: "终于有自己的独处时间", scores: { yurika: 2, aoi: 1 } },
-      { text: "买到喜欢的小东西", scores: { otome: 2, kaede: 1 } },
-      { text: "发现自己进步了", scores: { ran: 2, seira: 1 } },
-      { text: "被别人记住小细节", scores: { maria: 2, sakura: 1 } }
+      {
+        text: "吃点喜欢的东西转换心情",
+        scores: { otome: 2, kii: 1, ichigo: 1 }
+      },
+      {
+        text: "想一个人待会儿",
+        scores: { yurika: 2, sora: 1, maria: 1 }
+      },
+      {
+        text: "短暂休息后继续努力",
+        scores: { ran: 2, mizuki: 1, seira: 1 }
+      },
+      {
+        text: "找朋友聊天倾诉",
+        scores: { ichigo: 2, maria: 1, kii: 1 }
+      },
+      {
+        text: "整理一下接下来的计划",
+        scores: { aoi: 2, sakura: 1, kaede: 1 }
+      }
     ]
   },
 
   {
-    question: "你理想中的房间更像：",
+    question: "你更喜欢哪种偶像风格？",
     options: [
-      { text: "简单但很有质感", scores: { mizuki: 2, ran: 1 } },
-      { text: "舒服整洁、很好生活", scores: { sakura: 2, maria: 1 } },
-      { text: "灯光偏暗、适合晚上待着", scores: { yurika: 2, kaede: 1 } },
-      { text: "像艺术展一样有氛围", scores: { sora: 2, otome: 1 } },
-      { text: "热热闹闹放很多周边", scores: { kii: 2, ichigo: 1 } }
+      {
+        text: "元气感染全场",
+        scores: { ichigo: 2, kii: 1, maria: 1 }
+      },
+      {
+        text: "神秘感和距离感",
+        scores: { yurika: 2, mizuki: 1, kaede: 1 }
+      },
+      {
+        text: "帅气强大型",
+        scores: { seira: 2, ran: 1, mizuki: 1 }
+      },
+      {
+        text: "梦幻可爱型",
+        scores: { otome: 2, sora: 1, kii: 1 }
+      },
+      {
+        text: "聪明冷静型",
+        scores: { aoi: 2, sakura: 1, ran: 1 }
+      }
     ]
   },
 
   {
-    question: "朋友突然很难过，你会：",
+    question: "如果突然爆红，你会：",
     options: [
-      { text: "认真听对方讲话", scores: { maria: 2, aoi: 1 } },
-      { text: "努力让对方开心起来", scores: { ichigo: 2, kii: 1 } },
-      { text: "默默陪在旁边", scores: { yurika: 2, sora: 1 } },
-      { text: "帮对方分析问题", scores: { sakura: 2, seira: 1 } },
-      { text: "直接帮对方解决事情", scores: { ran: 2, mizuki: 1 } }
+      {
+        text: "开心和大家互动",
+        scores: { kii: 2, ichigo: 1, maria: 1 }
+      },
+      {
+        text: "担心自己做得还不够好",
+        scores: { ran: 2, mizuki: 1, aoi: 1 }
+      },
+      {
+        text: "想打造自己的独特风格",
+        scores: { kaede: 2, sora: 1, yurika: 1 }
+      },
+      {
+        text: "会认真回复粉丝",
+        scores: { maria: 2, sakura: 1, ichigo: 1 }
+      },
+      {
+        text: "表面冷静其实偷偷开心",
+        scores: { yurika: 2, aoi: 1, mizuki: 1 }
+      }
     ]
   },
 
   {
-    question: "你最受不了哪种情况？",
+    question: "如果在偶活里组队，你更想当：",
     options: [
-      { text: "生活太无聊没变化", scores: { kaede: 2, sora: 1 } },
-      { text: "气氛突然冷掉", scores: { kii: 2, ichigo: 1 } },
-      { text: "自己不够优秀", scores: { ran: 2, seira: 1 } },
-      { text: "事情完全失控", scores: { aoi: 2, mizuki: 1 } },
-      { text: "一直没有自己的空间", scores: { yurika: 2, sakura: 1 } }
+      {
+        text: "带动气氛的中心",
+        scores: { ichigo: 2, kii: 1, seira: 1 }
+      },
+      {
+        text: "负责规划的人",
+        scores: { aoi: 2, sakura: 1, mizuki: 1 }
+      },
+      {
+        text: "默默稳定团队的人",
+        scores: { maria: 2, ran: 1, sakura: 1 }
+      },
+      {
+        text: "最有个人特色的人",
+        scores: { kaede: 2, yurika: 1, sora: 1 }
+      },
+      {
+        text: "实力最强的ACE",
+        scores: { seira: 2, ran: 1, mizuki: 1 }
+      }
     ]
   },
 
   {
-    question: "你更喜欢哪种天气？",
+    question: "你更喜欢哪种舞台灯光？",
     options: [
-      { text: "黄昏特别漂亮的时候", scores: { otome: 2, sora: 1 } },
-      { text: "晚上有风的时候", scores: { yurika: 2, kaede: 1 } },
-      { text: "刚下完雨的时候", scores: { sakura: 2, maria: 1 } },
-      { text: "阳光正好的晴天", scores: { ichigo: 2, kii: 1 } },
-      { text: "冬天冷冷的空气", scores: { ran: 2, seira: 1 } }
+      {
+        text: "暖洋洋的亮色系",
+        scores: { ichigo: 2, maria: 1, kii: 1 }
+      },
+      {
+        text: "偏冷的高级灯光",
+        scores: { mizuki: 2, ran: 1, yurika: 1 }
+      },
+      {
+        text: "像童话一样的柔光",
+        scores: { otome: 2, sora: 1, maria: 1 }
+      },
+      {
+        text: "有点暗色系的夜晚氛围",
+        scores: { yurika: 2, kaede: 1, aoi: 1 }
+      },
+      {
+        text: "干净利落的聚光灯",
+        scores: { seira: 2, ran: 1, sakura: 1 }
+      }
     ]
   },
 
   {
-    question: "别人最常怎么评价你？",
+    question: "如果你在星光学园的朋友突然说“我可能并不适合当偶像”，你会说：",
     options: [
-      { text: "其实比想象中更温柔", scores: { yurika: 2, maria: 1 } },
-      { text: "做事很认真", scores: { aoi: 2, sakura: 1 } },
-      { text: "有自己的特别风格", scores: { kaede: 2, sora: 1 } },
-      { text: "很有活力", scores: { ichigo: 2, kii: 1 } },
-      { text: "对自己要求很高", scores: { mizuki: 2, ran: 1 } }
+      {
+        text: "要不要先休息一下？有时候只是太累了而已，你已经很棒了",
+        scores: { sakura: 2, maria: 1, aoi: 1 }
+      },
+      {
+        text: "才不是！你站在舞台上的时候真的超级闪闪发光啊！",
+        scores: { ichigo: 2, kii: 1, otome: 1 }
+      },
+      {
+        text: "能一直努力到现在的人，本来就已经很厉害了。",
+        scores: { ran: 2, seira: 1, mizuki: 1 }
+      },
+      {
+        text: "偶尔会迷茫也很正常呀，不代表你不适合。",
+        scores: { yurika: 2, kaede: 1, sora: 1 }
+      },
+      {
+        text: "但我觉得你的舞台有种别人没有的感觉，比如……（开始列举）",
+        scores: { sora: 2, kaede: 1, mizuki: 1 }
+      }
     ]
   },
 
   {
-    question: "如果突然有很多人关注你，你会：",
+    question: "如果拥有偶像气场，你希望是：",
     options: [
-      { text: "会认真回复大家", scores: { maria: 2, aoi: 1 } },
-      { text: "开始设立自己的人设", scores: { sora: 2, otome: 1 } },
-      { text: "想让自己表现更好", scores: { ran: 2, mizuki: 1 } },
-      { text: "开心地和大家互动", scores: { kii: 2, ichigo: 1 } },
-      { text: "表面冷静其实很在意评价", scores: { yurika: 2, sakura: 1 } }
+      {
+        text: "彩色宝石和星星一起闪闪发光的感觉",
+        scores: { ichigo: 2, kii: 1, maria: 1 }
+      },
+      {
+        text: "干净又有力量、让人忍不住一直注视的光",
+        scores: { mizuki: 2, seira: 1, ran: 1 }
+      },
+      {
+        text: "漂浮着糖果、花朵和童话泡泡的梦幻感",
+        scores: { sora: 2, otome: 1, kaede: 1 }
+      },
+      {
+        text: "月光、蝙蝠与暗紫色玫瑰交织的夜晚气息",
+        scores: { yurika: 2, kaede: 1, mizuki: 1 }
+      },
+      {
+        text: "温柔玻璃感、柔和的冷色系光芒",
+        scores: { aoi: 2, sakura: 1, maria: 1 }
+      }
     ]
   },
 
   {
-    question: "你更喜欢哪种生活节奏？",
+    question: "你更接近哪种生活方式？",
     options: [
-      { text: "稳定舒服最重要", scores: { sakura: 2, maria: 1 } },
-      { text: "每天都有新鲜事", scores: { ichigo: 2, kii: 1 } },
-      { text: "一直朝目标前进", scores: { seira: 2, ran: 1 } },
-      { text: "偶尔一个人待着充电", scores: { yurika: 2, aoi: 1 } },
-      { text: "自由自在的生活", scores: { kaede: 2, sora: 1 } }
+      {
+        text: "每天都想尝试新东西",
+        scores: { kaede: 2, ichigo: 1, kii: 1 }
+      },
+      {
+        text: "按自己的节奏稳定生活",
+        scores: { sakura: 2, maria: 1, aoi: 1 }
+      },
+      {
+        text: "一直朝目标前进",
+        scores: { ran: 2, seira: 1, mizuki: 1 }
+      },
+      {
+        text: "沉浸在喜欢的小世界里",
+        scores: { otome: 2, sora: 1, yurika: 1 }
+      },
+      {
+        text: "特立独行但享受其中",
+        scores: { yurika: 2, kaede: 1, aoi: 1 }
+      }
     ]
   },
 
   {
-    question: "如果现在立刻出门，你会：",
+    question: "如果要拍偶像活动海报，你会：",
     options: [
-      { text: "顺便把别的事一起做完", scores: { ran: 2, mizuki: 1 } },
-      { text: "戴耳机慢慢走", scores: { yurika: 2, maria: 1 } },
-      { text: "边走边决定去哪", scores: { ichigo: 2, kaede: 1 } },
-      { text: "先确认路线和天气", scores: { aoi: 2, sakura: 1 } },
-      { text: "想穿得好看一点再出门", scores: { sora: 2, otome: 1 } }
+      {
+        text: "笑得超级灿烂",
+        scores: { ichigo: 2, kii: 1, maria: 1 }
+      },
+      {
+        text: "认真研究镜头表现",
+        scores: { aoi: 2, mizuki: 1, sakura: 1 }
+      },
+      {
+        text: "想拍得帅一点",
+        scores: { seira: 2, ran: 1, mizuki: 1 }
+      },
+      {
+        text: "加入特别的小设计",
+        scores: { kaede: 2, sora: 1, otome: 1 }
+      },
+      {
+        text: "想拍出有故事感的感觉",
+        scores: { yurika: 2, sora: 1, maria: 1 }
+      }
     ]
   },
 
   {
-    question: "你更容易被哪种人吸引？",
+    question: "如果半夜睡不着，你一般会：",
     options: [
-      { text: "细心靠谱的人", scores: { sakura: 2, maria: 1 } },
-      { text: "能力很强的人", scores: { ran: 2, mizuki: 1 } },
-      { text: "有趣又有个性的人", scores: { kaede: 2, sora: 1 } },
-      { text: "安静但相处舒服的人", scores: { yurika: 2, aoi: 1 } },
-      { text: "很有感染力的人", scores: { ichigo: 2, kii: 1 } }
+      {
+        text: "刷点有趣的东西",
+        scores: { kii: 2, ichigo: 1, kaede: 1 }
+      },
+      {
+        text: "想很多未来的事",
+        scores: { aoi: 2, mizuki: 1, sakura: 1 }
+      },
+      {
+        text: "突然想努力变更强",
+        scores: { ran: 2, seira: 1, mizuki: 1 }
+      },
+      {
+        text: "脑内开始幻想小剧场",
+        scores: { otome: 2, sora: 1, yurika: 1 }
+      },
+      {
+        text: "安静听歌发呆",
+        scores: { maria: 2, yurika: 1, sakura: 1 }
+      }
     ]
   },
 
   {
-    question: "你最容易在哪种时候伤心？",
+    question: "你更希望别人怎么评价你？",
     options: [
-      { text: "来灵感却写不出东西的时候", scores: { sora: 2, kaede: 1 } },
-      { text: "热闹结束之后", scores: { ichigo: 2, kii: 1 } },
-      { text: "想太多未来的时候", scores: { aoi: 2, sakura: 1 } },
-      { text: "一个人待太久的时候", scores: { yurika: 2, maria: 1 } },
-      { text: "觉得自己不够厉害的时候", scores: { ran: 2, seira: 1 } }
+      {
+        text: "相处起来很舒服",
+        scores: { maria: 2, sakura: 1, aoi: 1 }
+      },
+      {
+        text: "很有魅力和存在感",
+        scores: { mizuki: 2, yurika: 1, kaede: 1 }
+      },
+      {
+        text: "特别有元气",
+        scores: { ichigo: 2, kii: 1, otome: 1 }
+      },
+      {
+        text: "很有个性",
+        scores: { sora: 2, kaede: 1, yurika: 1 }
+      },
+      {
+        text: "实力很强很可靠",
+        scores: { seira: 2, ran: 1, aoi: 1 }
+      }
     ]
   },
 
   {
-    question: "你希望别人怎么记住你？",
+    question: "如果偶活角色们一起去游乐园，你更像：",
     options: [
-      { text: "很有个性", scores: { kaede: 2, sora: 1 } },
-      { text: "温暖又有活力", scores: { ichigo: 2, maria: 1 } },
-      { text: "强大又耀眼", scores: { mizuki: 2, seira: 1 } },
-      { text: "聪明又可靠", scores: { aoi: 2, sakura: 1 } },
-      { text: "相处后会越来越喜欢", scores: { yurika: 2, otome: 1 } }
+      {
+        text: "一路兴奋到处跑的人",
+        scores: { ichigo: 2, kii: 1, maria: 1 }
+      },
+      {
+        text: "一直在拍漂亮照片的人",
+        scores: { mizuki: 2, ran: 1, yurika: 1 }
+      },
+      {
+        text: "准备超多零食的人",
+        scores: { otome: 2, sora: 1, kaede: 1 }
+      },
+      {
+        text: "想挑战刺激项目的人",
+        scores: { seira: 2, ran: 1, aoi: 1 }
+      },
+      {
+        text: "默默帮大家规划路线的人",
+        scores: { sakura: 2, maria: 1, aoi: 1 }
+      }
     ]
   }
 ];
